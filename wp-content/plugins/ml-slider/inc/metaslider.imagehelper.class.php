@@ -30,7 +30,7 @@ class MetaSliderImageHelper {
         $upload_dir = wp_upload_dir();
 
         $this->id = $slide_id;
-        $this->url = $upload_dir['baseurl'] . "/" . get_post_meta( $slide_id, '_wp_attached_file', true );
+        $this->url = apply_filters("metaslider_attachment_url", $upload_dir['baseurl'] . "/" . get_post_meta( $slide_id, '_wp_attached_file', true ), $slide_id);
         $this->path = get_attached_file( $slide_id );
         $this->container_width = $width;
         $this->container_height = $height;
@@ -46,7 +46,7 @@ class MetaSliderImageHelper {
      * @param string $crop_type
      */
     private function set_crop_type( $crop_type ) {
- 
+
         switch ( $crop_type ) {
             case "false":
             case "standard":
@@ -356,7 +356,7 @@ class MetaSliderImageHelper {
         $crop_position = get_post_meta( $this->id, 'ml-slider_crop_position', true );
 
         if ( $crop_position ) {
-            
+
             $parts = explode( "-", $crop_position );
 
             if ( isset( $parts[0], $parts[1] ) ) {

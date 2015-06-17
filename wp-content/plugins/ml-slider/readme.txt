@@ -3,8 +3,8 @@ Contributors: matchalabs
 Tags: wordpress slideshow,seo,slideshow,slider,widget,wordpress slider,image slider,flexslider,flex slider,nivoslider,nivo slider,responsive,responsive slides,coinslider,coin slider,slideshow,carousel,responsive slider,vertical slides
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CQ84KC4X8YKW8
 Requires at least: 3.5
-Tested up to: 4.1.1
-Stable tag: 3.3.1
+Tested up to: 4.2.2
+Stable tag: 3.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,7 @@ Upgrade to [Meta Slider Pro](http://www.metaslider.com/upgrade) to add support f
 * Hebrew (thanks to Ahrale)
 * Portuguese (thanks to mauro.mascarenhas)
 * Russian (thanks to asidoryak)
+* Ukrainian (thanks to mister_r)
 
 Read more and thanks to:
 
@@ -145,6 +146,12 @@ See www.metaslider.com/documentation/image-cropping/
 6. Administration panel - selecting slides
 
 == Changelog ==
+
+= 3.3.3 [11/06/15] =
+
+* Ukrainian language pack added (thanks to mister_r!)
+* Fix: Meta Slider hoplink incorrectly adding parameters to filtered url
+* Add "metaslider_attachment_url" filter
 
 = 3.3.2 [16/04/15] =
 

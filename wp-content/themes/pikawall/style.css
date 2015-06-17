@@ -6,6 +6,11 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+h1{
+	padding: 0;
+	margin: 0;
+}
+
 .wrap{
 	margin: 0 auto;
 	padding: 0;
@@ -212,6 +217,15 @@ body{
 	width: 100%;
 }
 
+.page-content{
+	margin: 20px 0;
+	padding-right: 200px;
+}
+
+.page-content h2{
+	font-weight: 600;
+}
+
 #slider{
 	float: left;
 	/*background-image: url('img/afbeelding1.png');*/
@@ -239,10 +253,25 @@ body{
 	font-weight: 400;
 }
 
+#title-header{
+	background-color: #a6a5a5;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+#title-header h1{
+	font-weight: 600;
+}
+
+#title-header h1 i{
+	margin-right: 20px;
+	font-size: 40px;
+}
+
 /* Footer */
 #nieuwsbrief{
 	float: left;
-	background-color: #756b6b;
+	background-color: #a6a5a5;
 	height: auto;
 	width: 50%;
 	padding: 20px 30px;
@@ -308,7 +337,7 @@ body{
 	width: 25%;
 }
 
-.menu-header-menu-container a{
+.footer-item a{
 	color: #756b6b;
 }
 
