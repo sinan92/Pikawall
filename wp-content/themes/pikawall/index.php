@@ -15,7 +15,7 @@
 	</div>
 	<div class="row">
 		<div class="page-content">
-		<?php echo $content ?>
+		<?php echo apply_filters('the_content',$content);?>
 		</div>
 	</div>
 </div>
