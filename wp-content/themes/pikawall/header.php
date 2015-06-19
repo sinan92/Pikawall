@@ -16,7 +16,11 @@
 							<li><i class="fa fa-envelope"></i> Mail: info@picawall.com</li>
 						</ul>
 						<ul id="cp">
-							<li><a href="#">Inloggen <i class="fa fa-chevron-down"></i></a></li>
+							<?php if(is_user_logged_in()){ ?>
+							<li><a href="<?php echo get_site_url(); ?>/my-account/customer-logout/">Uitloggen <i class="fa fa-chevron-down"></i></a></li>
+							<?php }else{ ?>
+							<li><a href="<?php echo get_site_url(); ?>/my-account/">Inloggen <i class="fa fa-chevron-down"></i></a></li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>

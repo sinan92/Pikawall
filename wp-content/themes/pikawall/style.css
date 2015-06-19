@@ -361,3 +361,26 @@ h1{
 	width: 90%;
 	margin-bottom: 20px;
 }
+
+/* Contact Form */
+.half-column-wrap{
+	float: left;
+	width: 49%;
+}
+
+.name-wrap{
+	margin-right: 2%;
+}
+
+.submit-wrap input{
+	background:rgba(0,0,0,0);
+	padding:5px 15px;  
+	border: 1px solid white;
+	color: #fff;
+	cursor:pointer;
+}
+
+#ninja_forms_form_5_all_fields_wrap{
+	color: #756b6b;
+	font-size: 13px;
+}
