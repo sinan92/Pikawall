@@ -4,6 +4,11 @@
  */
 ?>
  <?php get_header(); ?>
+ <style>
+	#primary-sidebar{
+		display: none;
+	}
+ </style>
 <div id="main">
 <div class="wrap">
 <div id="content">

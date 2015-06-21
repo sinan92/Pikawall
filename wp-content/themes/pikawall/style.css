@@ -217,8 +217,7 @@ h1{
 	width: 100%;
 }
 
-.page-content{
-	margin: 20px 0;
+.text-div{
 	padding-right: 200px;
 }
 
@@ -257,6 +256,7 @@ h1{
 	background-color: #a6a5a5;
 	color: #fff;
 	padding: 10px 20px;
+	margin-bottom: 20px;
 }
 
 #title-header h1{
@@ -362,6 +362,11 @@ h1{
 	margin-bottom: 20px;
 }
 
+/* WP Masonry */
+.wmle_container .wmle_item_holder .wpme_image img{
+	height: auto;
+}
+
 /* Contact Form */
 .half-column-wrap{
 	float: left;
@@ -373,7 +378,7 @@ h1{
 }
 
 .submit-wrap input{
-	background:rgba(0,0,0,0);
+	background-color: #756b6b;
 	padding:5px 15px;  
 	border: 1px solid white;
 	color: #fff;
@@ -383,4 +388,81 @@ h1{
 #ninja_forms_form_5_all_fields_wrap{
 	color: #756b6b;
 	font-size: 13px;
+}
+
+/* WooCommerce */
+.product-category img{
+	display: none;
+}
+
+/* WooCommerce Sidebar */
+#primary-sidebar{
+	float: left;
+	width: 25%;
+}
+
+#single-product, #gallery{
+	float: left;
+	width: 75%;
+}
+
+.widget_product_categories, .widget_shopping_cart h4{
+    text-transform: uppercase;
+	padding-right: 50px;
+}
+
+.widget_product_categories h4, .widget_shopping_cart h4{
+	padding-left: 30px;
+	margin-right: 50px;
+	color: #756b6b;
+	font-size: 16px;
+	font-weight: 600;
+	border-bottom: 1px solid #aba39a;
+}
+
+.product_list_widget li, .product_list_widget li a, .total{
+	color: #756b6b;
+	margin-right: 50px;
+}
+
+ul.product_list_widget li a{
+	margin-right: 50px;
+}
+
+.widget_product_categories ul {
+	padding: 0;
+}
+
+.widget_product_categories ul li{
+	padding-left: 30px;
+	list-style: none;
+	line-height: 2.0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.widget_product_categories ul li a{
+	text-decoration: none;
+}
+
+.products li{
+	float: left;
+	width: 33%;
+	margin-bottom: 50px;
+}
+
+.products .add_to_cart_button, .products .add_to_cart_icon{
+	color: white;
+	background-color: #edbf47;
+	text-decoration: none;
+    text-transform: uppercase;
+}
+
+.products .add_to_cart_button{
+	background-color: #edbf47;
+	padding: 10px 18px;
+}
+
+.products .add_to_cart_icon{
+	background-color: #6fc191;
+	padding: 10px 19px;
 }
