@@ -466,3 +466,28 @@ ul.product_list_widget li a{
 	background-color: #6fc191;
 	padding: 10px 19px;
 }
+
+/* Single Product Summary */
+.entry-summary{
+	margin: 30px 0;
+	padding: 10px 40px;
+	border: 1px solid #e0d6d6;
+}
+
+#single-product h4{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 400;
+	color: #756b6b;
+}
+
+#single-product .images{
+	width: 400px;
+	margin: 0 auto;
+}
+
+#single-product .images img{
+	border: 1px solid #aba39a;
+}
