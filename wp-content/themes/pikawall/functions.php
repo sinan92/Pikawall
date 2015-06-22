@@ -32,7 +32,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 }
 
 
-//Sidebar
+//Sidebars
 function your_widget(){
 
 register_sidebar(array( 
@@ -95,16 +95,23 @@ function woocommerce_total_product_price() {
 }
 
 //Woocommerce add next step
-add_filter( 'template_include', 'so_30978278_single_product_alt' );
-function so_30978278_single_product_alt( $template ){
-    if ( is_single() && get_post_type() == 'product' && isset( $_GET['next-step'] ) && intval( $_GET['next-step'] ) == 1 ) {
-        $template = locate_template( 'single-product-alt.php' );
-    }
-    return $template; 
+	add_filter( 'template_include', 'so_30978278_single_product_alt' );
+	function so_30978278_single_product_alt( $template ){
+		if ( is_single() && get_post_type() == 'product' && isset( $_GET['next-step'] ) && intval( $_GET['next-step'] ) == 1 ) {
+			$template = locate_template( 'single-product-step2.php' );
+		}
+		return $template; 
+	}
+
+if(!isset($_GET['next-step'])){
+	add_action( 'woocommerce_before_add_to_cart_form', 'so_30978278_additional_template_button' );
+	function so_30978278_additional_template_button(){
+		printf( '<a id="add-to-cart-button" href="%s">%s <i class="fa fa-arrow-circle-right"></i></a>', esc_url( add_query_arg( 'next-step', 1 ) ), __( 'Volgende stap' ) );
+	}
 }
 
-add_action( 'woocommerce_before_add_to_cart_form', 'so_30978278_additional_template_button' );
-function so_30978278_additional_template_button(){
-    printf( '<a id="add-to-cart-button" href="%s">%s <i class="fa fa-arrow-circle-right"></i></a>', esc_url( add_query_arg( 'next-step', 1 ) ), __( 'Voeg toe aan winkelwagen' ) );
+function custom_add_to_cart_redirect() { 
+    return 'galerij'; 
 }
+add_filter( 'woocommerce_add_to_cart_redirect', 'custom_add_to_cart_redirect' );
 ?>

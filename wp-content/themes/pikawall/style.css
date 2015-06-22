@@ -401,7 +401,7 @@ h1{
 	width: 25%;
 }
 
-#single-product, #gallery{
+#single-product, #gallery, #contact{
 	float: left;
 	width: 75%;
 }
@@ -502,6 +502,25 @@ ul.product_list_widget li a{
 	border: 1px solid #aba39a;
 }
 
+#single-product #images-prev{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#single-product .image-prev{
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 250px;
+	height: 250px;
+}
+
+#single-product .image-prev img{
+	position: absolute;
+	float: left;
+	border: 1px solid #aba39a;
+}
+
 #title-summary{
 	float: left;
 	width: 100%;
@@ -538,18 +557,16 @@ ul.product_list_widget li a{
 	float: right;
 	background-color: #b84141;
 	margin-top: -10px;
-	margin-left: 20px;
-	padding: 9px;
+	margin-right: 10px;
+	padding: 8px;
 	padding-right: 30px;
 	text-decoration: none;
 	text-align: center;
 	color: #fff;
-	width: 40%;
+	width: 30%;
 }
 
 .entry-summary #add-to-cart-button i{
-	position: absolute;
+	float: right;
 	font-size: 25px;
-	margin-left: 15px;
-	margin-top: -1px;
 }

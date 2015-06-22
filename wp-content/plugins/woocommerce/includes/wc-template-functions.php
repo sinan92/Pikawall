@@ -681,6 +681,17 @@ if ( ! function_exists( 'woocommerce_show_product_images' ) ) {
 		wc_get_template( 'single-product/product-image.php' );
 	}
 }
+if ( ! function_exists( 'woocommerce_show_product_images-prev' ) ) {
+
+	/**
+	 * Output the product image before the single product summary.
+	 *
+	 * @subpackage	Product
+	 */
+	function woocommerce_show_product_images_prev() {
+		wc_get_template( 'single-product/product-image-prev.php' );
+	}
+}
 if ( ! function_exists( 'woocommerce_show_product_thumbnails' ) ) {
 
 	/**

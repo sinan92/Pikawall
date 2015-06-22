@@ -105,6 +105,7 @@ add_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thu
  * @see woocommerce_show_product_thumbnails()
  */
 add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+add_action( 'woocommerce_before_single_product_summary_prev', 'woocommerce_show_product_images_prev', 20 );
 add_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
 
 /**
