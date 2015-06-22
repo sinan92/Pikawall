@@ -21,6 +21,7 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
+
 //Resize Images
 if ( function_exists( 'add_theme_support' ) ) {
 
@@ -75,22 +76,35 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_pri
 function woocommerce_total_product_price() {
     global $woocommerce, $product;
     // let's setup our divs
-    echo sprintf('<div id="product_total_price" style="margin-bottom:20px;">%s %s</div>',__('', 'woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() . number_format($product->get_price(), 2).'</span>');
+    echo sprintf('<div id="product_total_price">%s %s</div>',__('', 'woocommerce'),'<input type="text" disabled=disabled class="price" value="' . number_format($product->get_price(), 2).'" />');
     ?>
         <script>
             jQuery(function($){
-                var price = <?php echo $product->get_price(); ?>,
-                    currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
+                var price = <?php echo $product->get_price(); ?>;
  
                 $('[name=quantity]').change(function(){
                     if (!(this.value < 1)) {
                         var product_total = parseFloat(price * this.value);
-                        $('#product_total_price .price').html( currency + product_total.toFixed(2));
+                        $('#product_total_price .price').val( product_total.toFixed(2));
                     }
  
                 });
             });
         </script>
     <?php
+}
+
+//Woocommerce add next step
+add_filter( 'template_include', 'so_30978278_single_product_alt' );
+function so_30978278_single_product_alt( $template ){
+    if ( is_single() && get_post_type() == 'product' && isset( $_GET['next-step'] ) && intval( $_GET['next-step'] ) == 1 ) {
+        $template = locate_template( 'single-product-alt.php' );
+    }
+    return $template; 
+}
+
+add_action( 'woocommerce_before_add_to_cart_form', 'so_30978278_additional_template_button' );
+function so_30978278_additional_template_button(){
+    printf( '<a id="add-to-cart-button" href="%s">%s <i class="fa fa-arrow-circle-right"></i></a>', esc_url( add_query_arg( 'next-step', 1 ) ), __( 'Voeg toe aan winkelwagen' ) );
 }
 ?>

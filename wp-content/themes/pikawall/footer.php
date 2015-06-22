@@ -2,10 +2,10 @@
 			<div class="row">
 				<div id="nieuwsbrief">
 					<form action="" method="post">
-						<span style='width:10%'><i class="fa fa-envelope"></i></span>
-						<span style='width:30%'>Nieuwsbrief</span>
-						<span style='width:40%'><input type="text" name="email" id="email" /></span>
-						<span style='width:20%'><input type="submit" name="submit" id="submit" value="Inschrijven" /></span>
+					<?php
+					$widgetNL = new WYSIJA_NL_Widget(true);
+					echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php'));
+					?>
 					</form>
 				</div>
 				<div id="social">
@@ -24,12 +24,7 @@
 					</div>
 					<div class="footer-item">
 						<h4>Mijn account</h4>
-						<ul>
-							<li><a href="#">Mijn account</a></li>
-							<li><a href="#">Mijn winkelwagen</a></li>
-							<li><a href="#">Mijn wenslijst</a></li>
-							<li><a href="#">Mijn afspraken</a></li>
-						</ul>
+						<?php wp_nav_menu( array( 'menu' => 'Mijn account' ) ); ?>
 					</div>
 					<div class="footer-item">
 						<h4>Kontakteer ons</h4>

@@ -115,10 +115,6 @@ h1{
 	color: #fff;
 }
 
-#menu-bottom ul li a:link, #menu-bottom ul li a:active{
-	
-}
-
 #menu-bottom ul li:hover{
 	/*Hover menu items*/
 }
@@ -274,17 +270,20 @@ h1{
 	background-color: #a6a5a5;
 	height: auto;
 	width: 50%;
-	padding: 20px 30px;
+	padding: 10px 30px;
 	color: #fff;
 	font-size: 18px;
 }
 
-#nieuwsbrief span{
+#nieuwsbrief label, #nieuwsbrief input, #nieuwsbrief i{
 	float: left;
+	margin-bottom: 10px;
+	margin-right: 20px;
 }
 
-#nieuwsbrief #submit{
+#nieuwsbrief .wysija-submit{
 	background:rgba(0,0,0,0);
+	margin-top: 0;
 	padding:5px 15px;  
 	border: 1px solid white;
 	color: #fff;
@@ -298,6 +297,7 @@ h1{
 #social{
 	float: right;
 	padding: 20px 30px;
+	color: #756b6b;
 }
 
 .social-button{
@@ -411,6 +411,10 @@ h1{
 	padding-right: 50px;
 }
 
+.widget_product_categories ul li a{
+	color: #756b6b;
+}
+
 .widget_product_categories h4, .widget_shopping_cart h4{
 	padding-left: 30px;
 	margin-right: 50px;
@@ -453,25 +457,31 @@ ul.product_list_widget li a{
 .products .add_to_cart_button, .products .add_to_cart_icon{
 	color: white;
 	background-color: #edbf47;
+	padding: 10px 0;
+	float: left;
 	text-decoration: none;
     text-transform: uppercase;
+	text-align: center;
 }
 
 .products .add_to_cart_button{
 	background-color: #edbf47;
-	padding: 10px 18px;
+	width: 160px;
 }
 
 .products .add_to_cart_icon{
 	background-color: #6fc191;
-	padding: 10px 19px;
+	width: 40px;
+	font-size: 20px;
 }
 
 /* Single Product Summary */
 .entry-summary{
+	float: left;
+	width: 100%;
 	margin: 30px 0;
-	padding: 10px 40px;
 	border: 1px solid #e0d6d6;
+	text-transform: uppercase;
 }
 
 #single-product h4{
@@ -490,4 +500,56 @@ ul.product_list_widget li a{
 
 #single-product .images img{
 	border: 1px solid #aba39a;
+}
+
+#title-summary{
+	float: left;
+	width: 100%;
+	margin: 10px 0;
+}
+
+#title-summary span{
+	float: left;
+	width: 20%;
+	color: #756b6b;
+}
+
+.entry-summary .cart, #product_total_price .price{
+	float: left;
+	color: #756b6b;
+	text-align: center;
+	width: 20%;
+}
+
+.entry-summary .quantity{
+	float: left;
+	width: 20%;
+}
+
+.entry-summary .cart input, .entry-summary #product_total_price input{
+	text-align: center;
+	width: 60px;
+	padding: 10px 0;
+	margin-top: -10px;
+	color: #b84141;
+}
+
+.entry-summary #add-to-cart-button{
+	float: right;
+	background-color: #b84141;
+	margin-top: -10px;
+	margin-left: 20px;
+	padding: 9px;
+	padding-right: 30px;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	width: 40%;
+}
+
+.entry-summary #add-to-cart-button i{
+	position: absolute;
+	font-size: 25px;
+	margin-left: 15px;
+	margin-top: -1px;
 }

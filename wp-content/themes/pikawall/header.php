@@ -28,9 +28,11 @@
 			<div class="wrap">
 				<div id="header-bottom">
 					<div class="logo">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="Pikawall Logo"/>
+						<a href="<?php echo home_url(); ?>">
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png" alt="Pikawall Logo"/>
+						</a>
 					</div>
-					<a href="#">
+					<a href="<?php echo get_page_link(115); ?>">
 						<div id="afspraak">
 							<i class="fa fa-calendar"></i> Maak een afspraak
 						</div>

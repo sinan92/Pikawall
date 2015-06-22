@@ -42,7 +42,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 	<div class="summary entry-summary">
-
+	<div id="title-summary">
+		<span style="margin-left:143px;">Aantal</span>
+		<span>Totaal</span>
+	</div>
+	<span class="cart">Overzicht</span>
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
@@ -57,7 +61,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-
 	</div><!-- .summary -->
 
 	<?php
