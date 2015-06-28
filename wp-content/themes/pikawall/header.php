@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Pikawall</title>
+<?php wp_enqueue_script("jquery"); ?>
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/font-awesome.min.css">
