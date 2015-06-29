@@ -114,4 +114,35 @@ function custom_add_to_cart_redirect() {
     return 'galerij'; 
 }
 add_filter( 'woocommerce_add_to_cart_redirect', 'custom_add_to_cart_redirect' );
+
+
+//Woocommerce dimensions
+add_filter( 'woocommerce_catalog_settings', 'add_woocommerce_dimension_units' );
+ 
+function add_woocommerce_dimension_units( $settings ) {
+  foreach ( $settings as &$setting ) {
+ 
+    if ( $setting['id'] == 'woocommerce_dimension_unit' ) {
+      $options = array();
+ 
+      foreach ( $setting['options'] as $key => $value ) {
+        if ( $key == 'in' ) {
+          // safely add foot and mile to the dimensions units, in the correct order
+          $options[ $key ] = $value;
+ 
+          if ( ! isset( $setting['options']['ft'] ) ) $options['ft'] = __( 'ft' );  // foot
+          if ( ! isset( $options['yd'] ) )            $options['yd'] = __( 'yd' );  // yard (correct order)
+          if ( ! isset( $setting['options']['mi'] ) ) $options['mi'] = __( 'mi' );  // mile
+ 
+        } else {
+          // maintain all other existing dimensions
+          if ( ! isset( $options[ $key ] ) ) $options[ $key ] = $value;
+        }
+      }
+      $setting['options'] = $options;
+    }
+  }
+ 
+  return $settings;
+}
 ?>
